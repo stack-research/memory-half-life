@@ -1,0 +1,22 @@
+[project]
+name = "memory-half-life"
+version = "0.1.0"
+description = "Agent memory system with decay — memories that aren't used are forgotten"
+requires-python = ">=3.12"
+license = "MIT"
+dependencies = [
+    "entropy-os",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+memory-half-life = "memoryhalflife.cli:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+addopts = "-q"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
