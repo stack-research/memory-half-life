@@ -8,7 +8,7 @@ An agent memory system where context and knowledge literally decay unless refres
 
 ## Why it's a separate project
 
-This lives outside entropy-os intentionally. It proves entropy-os is a dependency you plug in, not a monolith you extend. A blog post lands harder when the reader can see a standalone repo with `entropy-os` in its `pyproject.toml` dependencies. Any project could do the same.
+This lives outside entropy-os intentionally. It proves entropy-os is a dependency you plug in, not a monolith you extend.
 
 ## Architecture
 
@@ -21,8 +21,6 @@ memory-half-life/
 │   └── cli.py             # demo CLI or REPL
 ├── tests/
 ├── pyproject.toml         # depends on entropy-os
-├── blog/
-│   └── memory-half-life.md
 └── CLAUDE.md              # this file
 ```
 
@@ -49,10 +47,6 @@ These were discussed and agreed upon before building:
 ## Why this matters
 
 Most AI agent memory systems accumulate indefinitely — context windows grow, vector stores bloat, nothing is ever removed. This inverts that pattern. The agent's memory is bounded not by token limits but by relevance decay. Old, unused knowledge disappears. The agent stays lean by forgetting.
-
-## Blog post
-
-The narrative: "here's a 200-line project that gives AI agents the ability to forget" with entropy-os doing the heavy lifting underneath. Draft lives in `blog/memory-half-life.md`.
 
 ## Build notes
 
