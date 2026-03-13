@@ -1,6 +1,6 @@
 # λ Memory Half-Life
 
-An agent memory system where knowledge decays unless reinforced. Built on top of [entropy-os](../entropy-os/).
+An agent memory system where knowledge decays unless reinforced. Built on top of [entropy-os](https://github.com/stack-research/entropy-os).
 
 Most AI agent memory systems accumulate indefinitely — context windows grow, vector stores bloat, nothing is ever removed. Memory Half-Life inverts that pattern. Memories have a half-life: their confidence degrades over time, and memories that go unused expire and are permanently forgotten. The agent stays lean by forgetting.
 
@@ -23,7 +23,7 @@ Time is measured in **ticks**, not wall-clock seconds. In an agent context, each
 
 ## Installation
 
-Requires Python >= 3.12 and [entropy-os](../entropy-os/) as a sibling directory.
+Requires Python >= 3.12 and [entropy-os](https://github.com/stack-research/entropy-os) as a sibling directory.
 
 ```bash
 pip install -e ../entropy-os
